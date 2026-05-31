@@ -1,0 +1,37 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/stores",
+      "destination": "/where-to-buy/",
+      "permanent": true
+    },
+    {
+      "source": "/product-page/satay-sauce",
+      "destination": "/satay-sauce/",
+      "permanent": true
+    },
+    {
+      "source": "/product-page/satay-lemongrass-marinade",
+      "destination": "/lemongrass-marinade/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
